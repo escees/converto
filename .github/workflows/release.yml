@@ -61,12 +61,16 @@ jobs:
         run: |
           choco install cmake nasm -y
           echo "C:\Program Files\NASM" | Out-File -FilePath $env:GITHUB_PATH -Append
+          vcpkg install libheif:x64-windows
+        env:
+          VCPKG_ROOT: C:\vcpkg
 
       - run: npm install
 
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VCPKG_ROOT: ${{ matrix.platform == 'windows-latest' && 'C:\vcpkg' || '' }}
         with:
           tagName: v__VERSION__
           releaseName: "Converto v__VERSION__"
