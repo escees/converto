@@ -1,0 +1,33 @@
+[package]
+name = "converto"
+version = "0.1.0"
+edition = "2021"
+description = "A fast, modern image converter"
+
+[lib]
+name = "converto_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+tauri-plugin-fs = "2"
+tauri-plugin-shell = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+thiserror = "2"
+image = { version = "0.25", features = ["default"] }
+libheif-rs = { version = "2.1", default-features = false, features = ["v1_17"] }
+turbojpeg = { version = "1", features = ["cmake"] }
+base64 = "0.22"
+rayon = "1.10"
+webp = "0.3"
+ravif = "0.11"
+rgb = "0.8"
+imgref = "1"
+log = "0.4"
+env_logger = "0.11"
