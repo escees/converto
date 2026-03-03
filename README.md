@@ -6,6 +6,8 @@ I built this because my wife kept asking me to convert photos for her — resize
 
 It's built with Rust (Tauri v2) and React, runs natively on macOS, Linux, and Windows, and is genuinely fast — not "fast for an Electron app" fast, but actual native-library fast.
 
+![Converto](assets/screenshot.png)
+
 ## Download
 
 Grab the latest release for your platform from the [Releases](https://github.com/escees/converto/releases) page:
