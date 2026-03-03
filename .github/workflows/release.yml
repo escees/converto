@@ -61,9 +61,10 @@ jobs:
         run: |
           choco install cmake nasm -y
           echo "C:\Program Files\NASM" | Out-File -FilePath $env:GITHUB_PATH -Append
-          vcpkg install libheif:x64-windows
+          vcpkg install libheif:x64-windows-static-md
         env:
           VCPKG_ROOT: C:\vcpkg
+          VCPKG_DEFAULT_TRIPLET: x64-windows-static-md
 
       - run: npm install
 
