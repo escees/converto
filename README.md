@@ -20,6 +20,12 @@ Grab the latest release for your platform from the [Releases](https://github.com
 
 Or build from source (see below).
 
+> **macOS note:** The app is not code-signed with an Apple Developer certificate, so macOS will block it on first launch. To fix this, run:
+> ```bash
+> xattr -cr /Applications/Converto.app
+> ```
+> Alternatively: open the app once (it will show a warning), then go to **System Settings → Privacy & Security** and click **Open Anyway**.
+
 ## Features
 
 - **Drag & drop** — drop one or many files, they show up with thumbnails
