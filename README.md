@@ -1,6 +1,6 @@
 # Converto
 
-A fast, simple image converter for people who don't want to touch the terminal.
+A fast, simple image converter for people tired of sketchy online converters that ask for your email, watermark your output, or limit you to 3 free conversions — and who also don't want to memorize `imagemagick` flags in a terminal.
 
 I built this because my wife kept asking me to convert photos for her — resize something, change the format, adjust proportions. She doesn't care about `ffmpeg` flags or `imagemagick` pipelines, she just wants to drag files in and get the result. So I wrote a proper desktop app that handles it.
 
